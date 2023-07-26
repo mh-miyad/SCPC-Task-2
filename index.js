@@ -1,3 +1,79 @@
+//?Task 1 : Create a function that takes a string as input and returns the reversed version of the string without using the built-in reverse() method.
+
+/**
+ * ! Here task 1 Start
+ */
+
+function revLetter(parm) {
+  let reverseLetter = parm.toLowerCase().split("").reverse().join("");
+
+  return reverseLetter;
+}
+
+/**
+ * ! Here task 1 ENd
+ */
+
+//?Task 2 : Create a function that takes an array of numbers as input and returns the sum of all positive numbers in the array.
+
+/**
+ * ! Here task 2 Start
+ */
+
+function sumPositiveNumbers(arr) {
+  let totalSum = 0;
+
+  for (let num of arr) {
+    if (num > 0) {
+      totalSum += num;
+    }
+  }
+
+  return totalSum;
+}
+
+// const inputArray = [2, -5, 10, -3, 7, 10, -10];
+// const output = sumPositiveNumbers(inputArray);
+// console.log(output);
+/**
+ * ! Here task 2 ENd
+ */
+
+//?Task 3: Write a JavaScript program to find the most frequent element in an array and return it.
+
+//*  Example Input: [3, 5, 2, 5, 3, 3, 1, 4, 5] Example Output: 3
+
+/**
+ * ! Here task 3 Start
+ */
+function findMostFrequentElement(arr) {
+  // Create an empty object to store element counts
+  const d = {};
+
+  arr.map((e) => {
+    d[e] = (d[e] || 0) + 1;
+  });
+
+  let data;
+  let maxCount = 0;
+
+  for (const num in d) {
+    if (d[num] > maxCount) {
+      maxCount = d[num];
+      data = num;
+    }
+  }
+
+  return data;
+}
+// const inputArray = [1, 2, 3, 3, 3, 4, 5, 5, 5, 5];
+// const output = findMostFrequentElement(inputArray);
+// console.log(output);
+
+/**
+ * ! Here task 3 Start
+ */
+
 /**
  * *Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
 
